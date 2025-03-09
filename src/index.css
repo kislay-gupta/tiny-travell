@@ -4,6 +4,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -120,5 +131,84 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .blur-backdrop {
+    @apply backdrop-blur-md bg-white/80 supports-[backdrop-filter]:bg-white/60;
+  }
+
+  .nav-link {
+    @apply relative inline-block py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .staggered-fade > * {
+    animation: fade-up cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+  }
+
+  .staggered-fade > *:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .staggered-fade > *:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .staggered-fade > *:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .staggered-fade > *:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .staggered-fade > *:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .staggered-fade > *:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  /* CSS for smooth page transitions */
+  .page-transition-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .page-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms, transform 400ms;
+  }
+
+  .page-transition-exit {
+    opacity: 1;
+  }
+
+  .page-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
+  /* Image lazy loading with blur effect */
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-loading {
+    filter: blur(10px);
+    transform: scale(1.05);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  .image-loaded {
+    filter: blur(0);
+    transform: scale(1);
   }
 }
