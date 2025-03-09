@@ -137,17 +137,17 @@ const Contact = () => {
                   <h3 className="font-medium">Email Us</h3>
                   <p className="text-muted-foreground mt-1">
                     <a
-                      href="mailto:info@wanderway.com"
+                      href="mailto:info@Fleance Kofi Kyere.com"
                       className="hover:text-primary transition-colors"
                     >
-                      info@wanderway.com
+                      info@Fleance Kofi Kyere.com
                     </a>
                     <br />
                     <a
-                      href="mailto:support@wanderway.com"
+                      href="mailto:support@Fleance Kofi Kyere.com"
                       className="hover:text-primary transition-colors"
                     >
-                      support@wanderway.com
+                      support@Fleance Kofi Kyere.com
                     </a>
                   </p>
                 </div>
@@ -277,7 +277,8 @@ const Contact = () => {
       <footer className="bg-secondary py-12 px-6 md:px-10 border-t">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Wanderway. All rights reserved.
+            © {new Date().getFullYear()} Fleance Kofi Kyere. All rights
+            reserved.
           </p>
         </div>
       </footer>

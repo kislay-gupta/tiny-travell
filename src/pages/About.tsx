@@ -15,7 +15,7 @@ const About = () => {
             Our Story
           </span>
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            About Wanderway
+            About Fleance Kofi Kyere
           </h1>
           <p className="text-muted-foreground text-lg">
             We believe that travel is transformative. Our mission is to inspire
@@ -44,9 +44,9 @@ const About = () => {
               Our Journey Began With a Passion for Discovery
             </h2>
             <p className="text-muted-foreground mb-4">
-              Founded in 2023, Wanderway was born from a simple idea: that
-              travel should be more than just visiting places—it should be about
-              experiencing them authentically and responsibly.
+              Founded in 2023, Fleance Kofi Kyere was born from a simple idea:
+              that travel should be more than just visiting places—it should be
+              about experiencing them authentically and responsibly.
             </p>
             <p className="text-muted-foreground mb-4">
               Our founders, avid travelers themselves, recognized the need for a
@@ -90,8 +90,8 @@ const About = () => {
           </span>
           <h2 className="text-3xl font-bold mb-4">Values That Guide Us</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            At Wanderway, our core values inform everything we do, from the
-            destinations we feature to the partnerships we form.
+            At Fleance Kofi Kyere, our core values inform everything we do, from
+            the destinations we feature to the partnerships we form.
           </p>
         </div>
 
@@ -188,7 +188,7 @@ const About = () => {
             Meet The Team
           </span>
           <h2 className="text-3xl font-bold mb-4">
-            The People Behind Wanderway
+            The People Behind Fleance Kofi Kyere
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Our diverse team brings together expertise in travel, technology,
@@ -273,8 +273,8 @@ const About = () => {
             </h2>
             <p className="text-muted-foreground mb-8">
               Whether you're planning your next adventure or simply dreaming of
-              far-off places, Wanderway is here to inspire and guide you every
-              step of the way.
+              far-off places, Fleance Kofi Kyere is here to inspire and guide
+              you every step of the way.
             </p>
             <a
               href="/contact"
@@ -290,7 +290,8 @@ const About = () => {
       <footer className="bg-secondary py-12 px-6 md:px-10 border-t">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Wanderway. All rights reserved.
+            © {new Date().getFullYear()} Fleance Kofi Kyere. All rights
+            reserved.
           </p>
         </div>
       </footer>

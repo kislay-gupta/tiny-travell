@@ -8,6 +8,9 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import CityDetail from "./pages/CityDetail";
 import { RootLayout } from "./layout/Index";
+import DestinationDetail from "./pages/DestinationDetail";
+import MustVisitPlaces from "./pages/MustVisitPlaces";
+import PopularDestinations from "./pages/PopularDestinations";
 
 const App = () => (
   <>
@@ -21,6 +24,15 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cities/:citySlug" element={<CityDetail />} />
+            <Route
+              path="/cities/:citySlug/:destinationSlug"
+              element={<DestinationDetail />}
+            />
+            <Route path="/must-visit-places" element={<MustVisitPlaces />} />
+            <Route
+              path="/popular-destinations"
+              element={<PopularDestinations />}
+            />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Route>

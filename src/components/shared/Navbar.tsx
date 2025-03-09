@@ -1,9 +1,8 @@
-
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import CityDropdown from './CityDropdown';
-import { cn } from '@/lib/utils';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import CityDropdown from "./CityDropdown";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,9 +13,9 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -26,26 +25,24 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 md:px-10",
-        isScrolled 
-          ? "py-4 blur-backdrop border-b" 
-          : "py-6"
+        isScrolled ? "py-4 blur-backdrop border-b" : "py-6"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link 
+        <Link
           to="/"
           className="font-semibold text-2xl tracking-tight transition-all duration-300"
         >
-          Wanderway
+          Fleance Kofi Kyere
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-10">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={cn(
               "nav-link text-sm font-medium transition-all",
               location.pathname === "/" && "text-primary"
@@ -53,11 +50,11 @@ const Navbar = () => {
           >
             Home
           </Link>
-          
+
           <CityDropdown />
-          
-          <Link 
-            to="/about" 
+
+          <Link
+            to="/about"
             className={cn(
               "nav-link text-sm font-medium transition-all",
               location.pathname === "/about" && "text-primary"
@@ -65,9 +62,9 @@ const Navbar = () => {
           >
             About Us
           </Link>
-          
-          <Link 
-            to="/contact" 
+
+          <Link
+            to="/contact"
             className={cn(
               "nav-link text-sm font-medium transition-all",
               location.pathname === "/contact" && "text-primary"
@@ -78,7 +75,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden flex items-center p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
@@ -101,11 +98,21 @@ const Navbar = () => {
             <div className="py-2 border-y">
               <p className="text-lg font-medium mb-3">Cities</p>
               <div className="space-y-4 pl-4">
-                <Link to="/cities/tokyo" className="block text-base">Tokyo</Link>
-                <Link to="/cities/paris" className="block text-base">Paris</Link>
-                <Link to="/cities/new-york" className="block text-base">New York</Link>
-                <Link to="/cities/rome" className="block text-base">Rome</Link>
-                <Link to="/cities/sydney" className="block text-base">Sydney</Link>
+                <Link to="/cities/tokyo" className="block text-base">
+                  Tokyo
+                </Link>
+                <Link to="/cities/paris" className="block text-base">
+                  Paris
+                </Link>
+                <Link to="/cities/new-york" className="block text-base">
+                  New York
+                </Link>
+                <Link to="/cities/rome" className="block text-base">
+                  Rome
+                </Link>
+                <Link to="/cities/sydney" className="block text-base">
+                  Sydney
+                </Link>
               </div>
             </div>
             <Link to="/about" className="text-lg font-medium">
