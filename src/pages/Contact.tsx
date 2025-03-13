@@ -120,11 +120,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-medium">Our Office</h3>
                   <p className="text-muted-foreground mt-1">
-                    123 Traveler's Avenue
+                    10 Reminder Lane, 16
                     <br />
-                    San Francisco, CA 94103
+                    London, SE10 0UJ
                     <br />
-                    United States
                   </p>
                 </div>
               </div>
@@ -137,27 +136,21 @@ const Contact = () => {
                   <h3 className="font-medium">Email Us</h3>
                   <p className="text-muted-foreground mt-1">
                     <a
-                      href="mailto:info@Fleance Kyere.com"
+                      href="mailto:fleapius1@gmail.com"
                       className="hover:text-primary transition-colors"
                     >
-                      info@Fleance Kyere.com
+                      fleapius1@gmail.com
                     </a>
                     <br />
-                    <a
-                      href="mailto:support@Fleance Kyere.com"
-                      className="hover:text-primary transition-colors"
-                    >
-                      support@Fleance Kyere.com
-                    </a>
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start">
+              <div className=" hidden items-start">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
-                <div>
+                <div className="">
                   <h3 className="font-medium">Call Us</h3>
                   <p className="text-muted-foreground mt-1">
                     <a
@@ -177,7 +170,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start">
+              <div className=" hidden items-start">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
@@ -195,7 +188,7 @@ const Contact = () => {
             </div>
 
             {/* Map or Image */}
-            <div className="mt-8 rounded-lg overflow-hidden border">
+            <div className="mt-8 hidden rounded-lg overflow-hidden border">
               <img
                 src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1806&q=80"
                 alt="Office location"
@@ -207,7 +200,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto bg-secondary/30">
+      <section className="py-16 px-6 hidden md:px-10 max-w-7xl mx-auto bg-secondary/30">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Frequently Asked Questions
@@ -274,13 +267,6 @@ const Contact = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary py-12 px-6 md:px-10 border-t">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Fleance Kyere. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };

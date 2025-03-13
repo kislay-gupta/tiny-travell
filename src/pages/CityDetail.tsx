@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin } from "lucide-react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { toast } from "@/components/ui/use-toast";
 import axios from "axios";
 import { TravelPost } from "@/types";
 import { BASE_URL } from "@/constants";
 import useLoader from "@/hooks/use-loader";
-
+import { Suspense } from "react";
+import { MoreCities } from "@/components/shared/MoreCities";
 const CityDetail = () => {
   const { citySlug } = useParams();
   const [cityData, setCityData] = useState<TravelPost | null>(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const { isLoading, startLoading, stopLoading } = useLoader();
   const fetchCityData = async () => {
     startLoading();
@@ -88,32 +92,32 @@ const CityDetail = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] min-h-[400px] flex items-center justify-center"
+        className="relative h-[60vh] min-h-[400px] flex items-center justify-center cursor-pointer"
+        onClick={() => setIsLightboxOpen(true)}
         style={{
           backgroundImage: `url(${cityData.picture_url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            {cityData.city_name}
-          </h1>
-          <div className="flex items-center justify-center space-x-2">
-            <MapPin className="h-5 w-5" />
-            <span>{cityData.title}</span>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-black/75"></div>
       </section>
+
+      <Lightbox
+        open={isLightboxOpen}
+        close={() => setIsLightboxOpen(false)}
+        slides={[{ src: cityData.picture_url }]}
+      />
 
       {/* City Information */}
       <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold mb-6">
-              About {cityData.city_name}
-            </h2>
+            <h2 className="text-3xl font-bold mb-6">{cityData.title}</h2>
+            <h3 className="flex">
+              <MapPin className="h-5 w-5" />
+              <span>{cityData.city_name}</span>
+            </h3>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               {cityData.description}
             </p>
@@ -127,7 +131,7 @@ const CityDetail = () => {
             </Link>
           </div>
 
-          {/* <div className="bg-secondary/20 p-6 rounded-lg">
+          <div className="bg-secondary/20 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">Post Details</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -136,14 +140,25 @@ const CityDetail = () => {
                   Created: {new Date(cityData.created_at).toLocaleDateString()}
                 </span>
               </li>
-              <li className="flex items-start">
-                <span className="inline-block h-2 w-2 rounded-full bg-primary mt-2 mr-3"></span>
-                <span>ID: {cityData.id}</span>
-              </li>
             </ul>
-          </div> */}
+          </div>
         </div>
       </section>
+
+      {/* More Cities Section */}
+      <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto">
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Explore More Cities</h2>
+          <p className="text-muted-foreground">
+            Discover other amazing destinations around the world
+          </p>
+        </div>
+        <Suspense fallback={<div>Loading more cities...</div>}>
+          <MoreCities currentCityId={citySlug || ""} />
+        </Suspense>
+      </section>
+
+      {/* Footer */}
     </div>
   );
 };

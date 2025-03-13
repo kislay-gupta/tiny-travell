@@ -74,7 +74,6 @@ const Index = () => {
                     slug: city.id.toLocaleString(),
                     image: city.picture_url,
                     description: city.description,
-                    placeCount: 0,
                   }}
                   index={index}
                 />
@@ -92,7 +91,7 @@ const Index = () => {
       </section>
 
       {/* Popular Destinations Section */}
-      <section className="py-20 px-6 md:px-10 max-w-7xl mx-auto bg-secondary/30">
+      <section className="py-20 px-6 hidden md:px-10 max-w-7xl mx-auto bg-secondary/30">
         <div className="mb-12 text-center">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
             Must-Visit Places

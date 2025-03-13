@@ -182,7 +182,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto">
+      <section className="hidden py-16 px-6 md:px-10 max-w-7xl mx-auto">
         <div className="text-center mb-12 animate-fade-up">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
             Meet The Team
@@ -287,13 +287,6 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary py-12 px-6 md:px-10 border-t">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Fleance Kyere. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };

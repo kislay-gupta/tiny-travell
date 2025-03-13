@@ -53,16 +53,16 @@ const HeroSection = () => {
       <div className="hero-content relative h-full flex flex-col justify-center px-6 md:px-10 max-w-7xl mx-auto z-10">
         <div className="staggered-fade max-w-3xl">
           <span className="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-medium mb-6">
-            Discover the world with us
+            Welcome to My Travel Journal
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-            Experience the journey of a lifetime
+            Hi, I'm Fleance Kyere
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl">
-            Explore breathtaking destinations, immerse yourself in diverse
-            cultures, and create memories that will last forever.
+            Join me as I share my travel experiences, curate amazing destinations, 
+            and help you discover the world's most breathtaking places.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -70,7 +70,7 @@ const HeroSection = () => {
               to="/must-visit-places"
               className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
             >
-              Explore Destinations
+              View My Recommendations
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
 
@@ -78,7 +78,7 @@ const HeroSection = () => {
               to="/about"
               className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium border border-white/20 transition-colors"
             >
-              Learn More
+              About Me
             </Link>
           </div>
         </div>
