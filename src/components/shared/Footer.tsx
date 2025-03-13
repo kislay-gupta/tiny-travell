@@ -1,5 +1,3 @@
-import { cities } from "@/data";
-
 const Footer = () => {
   return (
     <>
