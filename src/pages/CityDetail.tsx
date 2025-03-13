@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin } from "lucide-react";
-import DestinationCard from "@/components/DestinationCard";
 import { toast } from "@/components/ui/use-toast";
 import axios from "axios";
 import { TravelPost } from "@/types";

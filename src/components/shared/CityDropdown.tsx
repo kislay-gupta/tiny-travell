@@ -9,7 +9,7 @@ import axios from "axios";
 
 const CityDropdown = () => {
   const [cities, setCities] = useState<TravelPost[] | null>();
-  const { startLoading, stopLoading, isLoading } = useLoader();
+  const { startLoading, stopLoading } = useLoader();
   const getPictures = async () => {
     startLoading();
     try {
