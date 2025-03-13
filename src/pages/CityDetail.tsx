@@ -10,6 +10,8 @@ import { BASE_URL } from "@/constants";
 import useLoader from "@/hooks/use-loader";
 import { Suspense } from "react";
 import { MoreCities } from "@/components/shared/MoreCities";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 const CityDetail = () => {
   const { citySlug } = useParams();
   const [cityData, setCityData] = useState<TravelPost | null>(null);
@@ -99,9 +101,7 @@ const CityDetail = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      >
-        <div className="absolute inset-0 bg-black/75"></div>
-      </section>
+      ></section>
 
       <Lightbox
         open={isLightboxOpen}
@@ -110,14 +110,18 @@ const CityDetail = () => {
       />
 
       {/* City Information */}
-      <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
+      <section className="py-12 lg:py-16 px-6 md:px-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 gap-4">
+          <div>
             <h2 className="text-3xl font-bold mb-6">{cityData.title}</h2>
-            <h3 className="flex">
-              <MapPin className="h-5 w-5" />
+            <div className="flex items-center gap-2 text-muted-foreground mb-4">
+              <MapPin className="h-5 w-5 text-primary" />
               <span>{cityData.city_name}</span>
-            </h3>
+              <span className="mx-2">•</span>
+              <Badge>
+                {new Date(cityData.created_at).toLocaleDateString()}
+              </Badge>
+            </div>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               {cityData.description}
             </p>
@@ -130,28 +134,30 @@ const CityDetail = () => {
               Back to all cities
             </Link>
           </div>
-
-          <div className="bg-secondary/20 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4">Post Details</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="inline-block h-2 w-2 rounded-full bg-primary mt-2 mr-3"></span>
-                <span>
-                  Created: {new Date(cityData.created_at).toLocaleDateString()}
-                </span>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
 
       {/* More Cities Section */}
-      <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto">
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Explore More Cities</h2>
-          <p className="text-muted-foreground">
-            Discover other amazing destinations around the world
-          </p>
+      <section className="lg:py-16 px-6 md:px-10 lg:max-w-7xl mx-auto">
+        <div className="flex justify-between lg:mb-12">
+          <div>
+            <h2 className="text-xl lg:text-2xl font-bold mb-4">
+              Explore More Cities
+            </h2>
+            <p className="text-muted-foreground">
+              Discover other amazing destinations around the world
+            </p>
+          </div>
+          <div className="">
+            <Button asChild>
+              <Link
+                to="/must-visit-places"
+                className="inline-flex text-white items-center text-sm text-primary hover:underline"
+              >
+                More
+              </Link>
+            </Button>
+          </div>
         </div>
         <Suspense fallback={<div>Loading more cities...</div>}>
           <MoreCities currentCityId={citySlug || ""} />

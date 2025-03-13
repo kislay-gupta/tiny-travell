@@ -35,9 +35,9 @@ export function MoreCities({ currentCityId }: { currentCityId: string }) {
 
   return (
     <ScrollArea className="w-full lg:whitespace-nowrap rounded-md border">
-      <div className="flex w-full sm:w-max space-x-6 p-6">
+      <div className="flex w-full space-x-4 p-4 lg:space-x-6 lg:p-6">
         {filteredCities.map((city, index) => (
-          <div className="lg:w-[300px]" key={city.id}>
+          <div className="w-[250px]" key={city.id}>
             <CityCard
               city={{
                 title: city.city_name,

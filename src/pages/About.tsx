@@ -12,13 +12,13 @@ const About = () => {
       <div className="pt-28 pb-12 md:pt-36 md:pb-16 px-6 md:px-10 max-w-7xl mx-auto">
         <div className="max-w-3xl mx-auto text-center staggered-fade">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
-            Our Story
+            My Story
           </span>
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
             About Fleance Kyere
           </h1>
           <p className="text-muted-foreground text-lg">
-            We believe that travel is transformative. Our mission is to inspire
+            I believe that travel is transformative. My mission is to inspire
             and enable unforgettable journeys that enrich lives and connect
             cultures.
           </p>
@@ -41,22 +41,22 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Our Journey Began With a Passion for Discovery
+              My Journey Began With a Passion for Discovery
             </h2>
             <p className="text-muted-foreground mb-4">
-              Founded in 2023, Fleance Kyere was born from a simple idea: that
-              travel should be more than just visiting places—it should be about
-              experiencing them authentically and responsibly.
+              As a passionate traveler and explorer, I started this platform in
+              2023 with a simple vision: to share authentic travel experiences
+              that go beyond typical tourist destinations.
             </p>
             <p className="text-muted-foreground mb-4">
-              Our founders, avid travelers themselves, recognized the need for a
-              platform that goes beyond the typical tourist trails, offering
-              insights into the heart and soul of destinations.
+              Through my own adventures and experiences, I recognized the need
+              for genuine insights that reveal the true heart and soul of each
+              destination.
             </p>
             <p className="text-muted-foreground">
-              Today, we're proud to help travelers from around the world
-              discover meaningful experiences that create lasting memories and
-              foster global understanding.
+              Today, I'm proud to help fellow travelers discover meaningful
+              experiences that create lasting memories and foster global
+              understanding.
             </p>
           </div>
 
@@ -86,12 +86,12 @@ const About = () => {
       <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto bg-secondary/30">
         <div className="text-center mb-12 animate-fade-up">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
-            Our Principles
+            My Principles
           </span>
-          <h2 className="text-3xl font-bold mb-4">Values That Guide Us</h2>
+          <h2 className="text-3xl font-bold mb-4">Values That Guide Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            At Fleance Kyere, our core values inform everything we do, from the
-            destinations we feature to the partnerships we form.
+            These core values inform everything I do, from the destinations I
+            feature to the experiences I share.
           </p>
         </div>
 
@@ -269,12 +269,12 @@ const About = () => {
         <div className="bg-primary/5 rounded-xl p-8 md:p-12 text-center">
           <div className="max-w-2xl mx-auto animate-fade-up">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Join us on this journey
+              Let's Connect
             </h2>
             <p className="text-muted-foreground mb-8">
               Whether you're planning your next adventure or simply dreaming of
-              far-off places, Fleance Kyere is here to inspire and guide you
-              every step of the way.
+              far-off places, I'm here to inspire and guide you every step of
+              the way.
             </p>
             <a
               href="/contact"

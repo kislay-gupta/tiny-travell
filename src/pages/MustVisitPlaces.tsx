@@ -43,12 +43,12 @@ const MustVisitPlaces = () => {
           </Link>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Must-Visit Places
+            My Travel Adventures
           </h1>
           <p className="text-muted-foreground max-w-2xl">
-            Explore our curated collection of iconic landmarks, natural wonders,
-            and unforgettable destinations that should be on every traveler's
-            bucket list.
+            Join me on my journey as I share some of my favorite places around
+            the world. These are the destinations that have left a lasting
+            impression on me and shaped my travel experiences.
           </p>
         </div>
       </header>
@@ -80,29 +80,22 @@ const MustVisitPlaces = () => {
       <section className="py-16 px-6 md:px-10 max-w-7xl mx-auto">
         <div className="bg-primary/5 rounded-xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Plan your dream journey
+            Let's Connect!
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to explore these amazing destinations? Let us help you create
-            the perfect itinerary for your next adventure.
+            Want to know more about my travel experiences or share your own
+            stories? I'd love to hear from you and exchange travel tips!
           </p>
           <Link
             to="/contact"
             className="inline-block px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
           >
-            Contact Us
+            Get in Touch
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary py-12 px-6 md:px-10 border-t">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Fleance Kyere. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };

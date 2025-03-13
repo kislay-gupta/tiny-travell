@@ -16,7 +16,7 @@ const App = () => (
   <>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
+      <Sonner position="top-left" richColors closeButton />
       <>
         <Routes>
           <Route element={<RootLayout />}>

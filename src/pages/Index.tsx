@@ -12,6 +12,7 @@ import CardSkeleton from "@/components/CardSkeleton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
+import { toast } from "sonner";
 
 const Index = () => {
   const [cities, setCities] = useState<TravelPost[] | null>();
@@ -137,6 +138,10 @@ const Index = () => {
               />
               <button
                 type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toast.info("Coming soon!");
+                }}
                 className="px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
               >
                 Subscribe
