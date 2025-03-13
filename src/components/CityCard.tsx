@@ -45,9 +45,9 @@ const CityCard = ({ city, index }: CityCardProps) => {
       {/* City info overlay */}
       <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
         <div className="flex items-center space-x-1 mb-1.5">
-          <MapPin className="h-4 w-4" />
+          <MapPin className="h-4 w-4 my-auto" />
+          <h3 className="text-xl font-bold">{city.title}</h3>
         </div>
-        <h3 className="text-xl font-bold">{city.title}</h3>
       </div>
 
       {/* Reveal on hover */}
