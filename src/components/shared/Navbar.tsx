@@ -36,7 +36,7 @@ const Navbar = () => {
           to="/"
           className="font-semibold text-2xl tracking-tight transition-all duration-300"
         >
-          Fleance Kofi Kyere
+          Fleance Kyere
         </Link>
 
         {/* Desktop Navigation */}

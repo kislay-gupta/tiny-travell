@@ -1,16 +1,45 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HeroSection from "@/components/home/HeroSection";
 import CityCard from "@/components/CityCard";
 import DestinationCard from "@/components/DestinationCard";
-import { cities, popularDestinations } from "@/data";
-
+import { popularDestinations } from "@/data";
+import { BASE_URL } from "@/constants";
 // Sample data for cities
+import axios from "axios";
+import { TravelPost } from "@/types";
+import useLoader from "@/hooks/use-loader";
+import CardSkeleton from "@/components/CardSkeleton";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
+  const [cities, setCities] = useState<TravelPost[] | null>();
+  const { startLoading, stopLoading, isLoading } = useLoader();
+  const getPictures = async () => {
+    startLoading();
+    try {
+      const res = await axios.get(`${BASE_URL}/api/pictures`);
+      setCities(res.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      stopLoading();
+    }
+  };
   useEffect(() => {
     // Scroll to top when component mounts
+    getPictures();
     window.scrollTo(0, 0);
   }, []);
+
+  const LoadingCards = () => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {[1, 2, 3, 4, 5, 6].map((index) => (
+        <CardSkeleton key={index} />
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -32,10 +61,33 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {cities.map((city, index) => (
-            <CityCard key={city.slug} city={city} index={index} />
-          ))}
+        {isLoading ? (
+          <LoadingCards />
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {cities &&
+              cities.map((city, index) => (
+                <CityCard
+                  key={city.city_name}
+                  city={{
+                    title: city.city_name,
+                    slug: city.id.toLocaleString(),
+                    image: city.picture_url,
+                    description: city.description,
+                    placeCount: 0,
+                  }}
+                  index={index}
+                />
+              ))}
+          </div>
+        )}
+        <div className="self-end justify-end flex mt-4">
+          <Button asChild className="group">
+            <Link to="/must-visit-places" className="flex items-center gap-2">
+              View More
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
       </section>
 

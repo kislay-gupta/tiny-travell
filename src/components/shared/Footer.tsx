@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="bg-secondary py-12 px-6 md:px-10 border-t">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Fleance Kofi Kyere</h3>
+            <h3 className="font-bold text-lg mb-4">Fleance Kyere</h3>
             <p className="text-sm text-muted-foreground mb-4">
               Inspiring travelers with authentic experiences and personalized
               journeys since 2023.
@@ -100,7 +100,9 @@ const Footer = () => {
         </div>
 
         <div className="max-w-7xl mx-auto mt-12 pt-6 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Fleance Kofi Kyere. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Fleance Kyere. All rights reserved.
+          </p>
         </div>
       </footer>
     </>
