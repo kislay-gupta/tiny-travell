@@ -1,6 +1,6 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { MapPin, Menu, X } from "lucide-react";
+import { MapPin, Menu } from "lucide-react";
 import CityDropdown from "./CityDropdown";
 import { cn } from "@/lib/utils";
 import {
