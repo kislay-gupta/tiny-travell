@@ -29,8 +29,8 @@ const About = () => {
       <div className="px-6 md:px-10 max-w-5xl mx-auto mb-20">
         <div className="aspect-video rounded-xl overflow-hidden shadow-md">
           <img
-            src="https://images.unsplash.com/photo-1492138786289-d35ea832da43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Team exploring the world"
+            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Eiffel Tower at sunset"
             className="w-full h-full object-cover"
           />
         </div>
@@ -66,15 +66,15 @@ const About = () => {
           >
             <div className="aspect-[4/5] rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-                alt="Mountain landscape"
+                src="https://images.unsplash.com/photo-1555921015-5532091f6026?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                alt="Taj Mahal in morning light"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-[4/5] rounded-lg overflow-hidden translate-y-6">
               <img
-                src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-                alt="City exploration"
+                src="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                alt="Colosseum in Rome"
                 className="w-full h-full object-cover"
               />
             </div>
